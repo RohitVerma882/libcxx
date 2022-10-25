@@ -90,6 +90,8 @@ libcxxabi_includes := \
     $(LOCAL_PATH)/include \
     $(LOCAL_PATH)/include/abi \
 
+libcxxabi_export_includes := $(libcxxabi_includes)
+
 libcxxabi_cflags := -D__STDC_FORMAT_MACROS
 libcxxabi_cppflags := \
     -D_LIBCXXABI_NO_EXCEPTIONS \
@@ -102,7 +104,7 @@ LOCAL_MODULE := libcxx
 LOCAL_SRC_FILES := $(libcxx_sources) $(libcxxabi_src_files)
 LOCAL_C_INCLUDES := $(libcxx_includes) $(libcxxabi_includes)
 LOCAL_CPPFLAGS := $(libcxx_cxxflags) $(libcxxabi_cppflags) -ffunction-sections -fdata-sections
-LOCAL_EXPORT_C_INCLUDES := $(libcxx_export_includes)
+LOCAL_EXPORT_C_INCLUDES := $(libcxx_export_includes) $(libcxxabi_export_includes)
 LOCAL_EXPORT_CPPFLAGS := $(libcxx_export_cxxflags)
 LOCAL_EXPORT_LDFLAGS := $(libcxx_export_ldflags)
 include $(BUILD_STATIC_LIBRARY)
