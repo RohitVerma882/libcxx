@@ -107,6 +107,4 @@ LOCAL_CPPFLAGS := $(libcxx_cxxflags) $(libcxxabi_cppflags) -ffunction-sections -
 LOCAL_EXPORT_C_INCLUDES := $(libcxx_export_includes) $(libcxxabi_export_includes)
 LOCAL_EXPORT_CPPFLAGS := $(libcxx_export_cxxflags)
 LOCAL_EXPORT_LDFLAGS := $(libcxx_export_ldflags)
-# https://gist.github.com/vvb2060/56d5b8fda2553f36938b2b72b1390114/f8bb9882cbff921ba0dc643e5d15beb93b87700e
-STATIC_LIBRARY_STRIP := true
 include $(BUILD_STATIC_LIBRARY)
